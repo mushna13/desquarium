@@ -1,6 +1,9 @@
 Hello! Thank you so much for downloading my game. :3
 
-To play the game, simply download and click on Desquarium.exe!
+To play the game,
+1. Download Desquarium-win.zip if on Windows
+Download Desquarium-mac.zip if on MacOS
+2. Extract the file, and it's ready to play!
 
 This game is just a simple aquarium game where you can feed the fishes, and 
 clean the aquarium when it gets dirty. When you click "new game", it opens a screen where
@@ -40,4 +43,4 @@ Wonderhoy!
 
 Again, thanks so much for playing! Hope you enjoy the game <3
 
-- Mushna
+Mushna
