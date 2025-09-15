@@ -5,8 +5,9 @@ To play the game,
              Desquarium-mac.zip if on MacOS
 2. Extract the file, and it's ready to play!
 
-PS. MacOS users might get a pop up saying that Apple could not verify the application -- when that happens,
-go to Settings > Privacy & Security, scroll down to find the warning under Security and click on "Allow Anyway"
+PS. While trying to run for the first time, users might get a warning pop up! when that happens,
+    MacOS: Go to Settings > Privacy & Security, scroll down to find the warning under Security and click on "Allow Anyway"
+    Windows: On the pop up, click on "More Info" and then "Run It Anyway"
 
 This game is just a simple aquarium game where you can feed the fishes, and 
 clean the aquarium when it gets dirty. When you click "new game", it opens a screen where
