@@ -5,6 +5,9 @@ To play the game,
 Download Desquarium-mac.zip if on MacOS
 2. Extract the file, and it's ready to play!
 
+PS. MacOS users might get a pop up saying that Apple could not verify the application -- when that happens,
+go to Settings > Privacy & Security, scroll down to find the warning under Security and click on "Allow Anyway"
+
 This game is just a simple aquarium game where you can feed the fishes, and 
 clean the aquarium when it gets dirty. When you click "new game", it opens a screen where
 you click on the "pull" button randomly to get 6 random fishes out of 12 fishes. Clicking the
