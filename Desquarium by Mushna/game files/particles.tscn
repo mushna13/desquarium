@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://yhx33socng56"]
+
+[ext_resource type="Texture2D" uid="uid://b685qo8poesi2" path="res://vfx/big bubble.png" id="1_1nvrg"]
+[ext_resource type="Script" uid="uid://dtnaxfq8wa58o" path="res://cpu_particles_2d.gd" id="2_i1ypt"]
+
+[sub_resource type="Curve" id="Curve_s4h77"]
+_data = [Vector2(0.110169, 0.956229), 0.0, 0.0, 0, 0, Vector2(0.725989, 0.543531), 0.0, 0.0, 0, 0, Vector2(0.920904, 0.481), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="Particles" type="Node2D"]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 60
+texture = ExtResource("1_1nvrg")
+lifetime = 1.19
+preprocess = 1.85
+speed_scale = 2.11
+explosiveness = 0.27
+randomness = 0.41
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 1000.0
+scale_amount_min = 0.5
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_s4h77")
+script = ExtResource("2_i1ypt")

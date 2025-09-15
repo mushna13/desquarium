@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://bv02ulbk6hvaj"]
+
+[ext_resource type="Texture2D" uid="uid://d3p6xdw1bbcsu" path="res://bgs/bg for menu.jpg" id="1_lti8b"]
+[ext_resource type="Texture2D" uid="uid://gjt0j5miabg" path="res://ui/button.png" id="2_ouk20"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_lti8b")
+
+[node name="Button" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 352.0
+offset_right = 1092.0
+offset_bottom = 548.0
+icon = ExtResource("2_ouk20")
+flat = true
+vertical_icon_alignment = 0
+
+[node name="Button2" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 184.0
+offset_right = 1092.0
+offset_bottom = 380.0
+icon = ExtResource("2_ouk20")
+flat = true
+vertical_icon_alignment = 0

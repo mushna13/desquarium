@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfe38np0wwnl7"]
+
+[ext_resource type="Script" uid="uid://b3sixgifygjc" path="res://spawn_food.gd" id="1_k7ula"]
+
+[node name="Spawn Bubble" type="Node2D"]
+visibility_layer = 2
+script = ExtResource("1_k7ula")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.001
+autostart = true

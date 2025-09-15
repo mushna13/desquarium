@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfu1tiqiw7bwf"]
+
+[ext_resource type="PackedScene" uid="uid://dt824t17dqewo" path="res://fish.tscn" id="1_v4xkx"]
+[ext_resource type="Texture2D" uid="uid://dmvfuha7e30l7" path="res://fishes/hilsha.png" id="2_sbkbn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_en3s1"]
+radius = 206.437
+height = 901.513
+
+[node name="Hilsha" instance=ExtResource("1_v4xkx")]
+collision_layer = 2
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(28, 5)
+shape = SubResource("CapsuleShape2D_en3s1")
+
+[node name="Sprite2D" parent="." index="1"]
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("2_sbkbn")

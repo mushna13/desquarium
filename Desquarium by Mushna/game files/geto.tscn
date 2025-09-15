@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbji8tbnfigx8"]
+
+[ext_resource type="PackedScene" uid="uid://dt824t17dqewo" path="res://fish.tscn" id="1_edg5u"]
+[ext_resource type="Texture2D" uid="uid://cgk46hcty3vr7" path="res://fishes/geto.png" id="2_wcjba"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_edg5u"]
+radius = 211.062
+height = 481.823
+
+[node name="Geto" instance=ExtResource("1_edg5u")]
+collision_layer = 2
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CapsuleShape2D_edg5u")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_wcjba")

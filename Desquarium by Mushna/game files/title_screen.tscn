@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2y76tb0nqgq1"]
+
+[ext_resource type="Texture2D" uid="uid://dugx7pny0hyh0" path="res://bgs/title screen.jpg" id="1_ak2if"]
+[ext_resource type="Script" uid="uid://yrb3irnckkmu" path="res://title_screen.gd" id="2_ig5kc"]
+[ext_resource type="LabelSettings" uid="uid://bn360funf30ar" path="res://fishlabelgacha.tres" id="3_05l2w"]
+[ext_resource type="Theme" uid="uid://1s5r4edd2wxd" path="res://tt.tres" id="3_ig5kc"]
+
+[node name="Title" type="Node2D"]
+script = ExtResource("2_ig5kc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_ak2if")
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 593.0
+offset_right = 784.0
+offset_bottom = 729.0
+text = "created by Mushna"
+label_settings = ExtResource("3_05l2w")
+
+[node name="Vbox" type="VBoxContainer" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Control" type="Control" parent="Vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control2" type="Control" parent="Vbox/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="New Game" type="Button" parent="Vbox/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_ig5kc")
+text = "New Game"
+vertical_icon_alignment = 0
+
+[node name="Load Game" type="Button" parent="Vbox/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_ig5kc")
+text = "Load Game"
+vertical_icon_alignment = 0
+
+[node name="Control" type="Control" parent="Vbox/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Control2" type="Control" parent="Vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.3
+
+[connection signal="pressed" from="Vbox/HBoxContainer/New Game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="Vbox/HBoxContainer/Load Game" to="." method="_on_load_game_pressed"]

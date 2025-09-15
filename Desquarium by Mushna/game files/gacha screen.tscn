@@ -1,0 +1,173 @@
+[gd_scene load_steps=5 format=3 uid="uid://viqirioe6e1b"]
+
+[ext_resource type="Script" uid="uid://dbpa6housu645" path="res://gacha.gd" id="1_0n7d8"]
+[ext_resource type="Texture2D" uid="uid://d3p6xdw1bbcsu" path="res://bgs/bg for menu.jpg" id="1_ffr67"]
+[ext_resource type="Theme" uid="uid://1s5r4edd2wxd" path="res://tt.tres" id="3_0n7d8"]
+[ext_resource type="LabelSettings" uid="uid://bn360funf30ar" path="res://fishlabelgacha.tres" id="5_u8fo0"]
+
+[node name="Gacha Screen" type="CanvasLayer"]
+script = ExtResource("1_0n7d8")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -576.0
+offset_top = -648.0
+offset_right = 576.0
+texture = ExtResource("1_ffr67")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/GridContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+theme_override_font_sizes/font_size = 20
+label_settings = ExtResource("5_u8fo0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/GridContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/GridContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+theme_override_font_sizes/font_size = 20
+label_settings = ExtResource("5_u8fo0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/GridContainer/VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/GridContainer/VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+theme_override_font_sizes/font_size = 20
+label_settings = ExtResource("5_u8fo0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/GridContainer/VBoxContainer4"]
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/GridContainer/VBoxContainer4"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+theme_override_font_sizes/font_size = 20
+label_settings = ExtResource("5_u8fo0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/GridContainer/VBoxContainer5"]
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/GridContainer/VBoxContainer5"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+theme_override_font_sizes/font_size = 20
+label_settings = ExtResource("5_u8fo0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer6" type="VBoxContainer" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/GridContainer/VBoxContainer6"]
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/GridContainer/VBoxContainer6"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+theme_override_font_sizes/font_size = 20
+label_settings = ExtResource("5_u8fo0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.3
+
+[node name="Control2" type="Control" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Pull" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_0n7d8")
+text = "Pull"
+
+[node name="Aquarium" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_0n7d8")
+text = "Aquarium"
+
+[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Aquarium" to="." method="_on_aquarium_pressed"]

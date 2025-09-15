@@ -1,0 +1,41 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://1s5r4edd2wxd"]
+
+[ext_resource type="FontFile" uid="uid://bfumkugn87uot" path="res://montserrat-font/MontserratBoldItalic-ALPax.otf" id="1_lfeod"]
+[ext_resource type="Texture2D" uid="uid://gjt0j5miabg" path="res://ui/button.png" id="2_hviqk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ungg5"]
+texture = ExtResource("2_hviqk")
+region_rect = Rect2(22.5, 13.5, 241, 114)
+modulate_color = Color(0.564962, 0.564962, 0.564962, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_52fjs"]
+texture = ExtResource("2_hviqk")
+region_rect = Rect2(21.5, 15.5, 238, 110)
+modulate_color = Color(1.54018e-06, 0.729074, 0.732375, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l6mp1"]
+texture = ExtResource("2_hviqk")
+region_rect = Rect2(21.5, 16.5, 240, 109)
+modulate_color = Color(0.808998, 0.808998, 0.808998, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iqgap"]
+texture = ExtResource("2_hviqk")
+region_rect = Rect2(22.5, 14.5, 239, 109)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1swpi"]
+texture = ExtResource("2_hviqk")
+region_rect = Rect2(22.5, 14.5, 239, 109)
+modulate_color = Color(0.450648, 0.450648, 0.450648, 1)
+
+[resource]
+Button/colors/font_color = Color(0.384314, 0.278431, 0.713726, 1)
+Button/constants/align_to_largest_stylebox = 1
+Button/constants/h_separation = 0
+Button/constants/outline_size = 1
+Button/font_sizes/font_size = 30
+Button/fonts/font = ExtResource("1_lfeod")
+Button/styles/disabled = SubResource("StyleBoxTexture_ungg5")
+Button/styles/focus = SubResource("StyleBoxTexture_52fjs")
+Button/styles/hover = SubResource("StyleBoxTexture_l6mp1")
+Button/styles/normal = SubResource("StyleBoxTexture_iqgap")
+Button/styles/pressed = SubResource("StyleBoxTexture_1swpi")

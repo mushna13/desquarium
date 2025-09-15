@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dquqi6v1djwj5"]
+
+[ext_resource type="PackedScene" uid="uid://dt824t17dqewo" path="res://fish.tscn" id="1_gbp3i"]
+[ext_resource type="Texture2D" uid="uid://6tq430lr3103" path="res://fishes/guppy.png" id="2_y2eiy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bfyts"]
+radius = 120.495
+height = 475.948
+
+[node name="Guppy" instance=ExtResource("1_gbp3i")]
+collision_layer = 2
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(4, 9)
+shape = SubResource("CapsuleShape2D_bfyts")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_y2eiy")

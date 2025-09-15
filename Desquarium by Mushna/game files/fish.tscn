@@ -1,0 +1,98 @@
+[gd_scene load_steps=11 format=3 uid="uid://dt824t17dqewo"]
+
+[ext_resource type="Script" uid="uid://c4popkpo8b5qs" path="res://fish.gd" id="2_6ik3a"]
+[ext_resource type="Texture2D" uid="uid://emrl1nh1lwmv" path="res://vfx/spritesheet.png" id="2_hgn23"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hgn23"]
+radius = 58.3095
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xu20i"]
+radius = 1370.13
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6ik3a"]
+particles_animation = true
+particles_anim_h_frames = 2
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Curve" id="Curve_oovoc"]
+_limits = [0.0, 200.0, 0.0, 1.0]
+_data = [Vector2(0, 200), 0.0, 0.0, 0, 0, Vector2(0.963235, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_8vtik"]
+curve = SubResource("Curve_oovoc")
+
+[sub_resource type="Curve" id="Curve_hgn23"]
+_data = [Vector2(0, 0.337079), 0.0, 0.0, 0, 0, Vector2(0.448529, 0.325843), 0.0979544, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_6ik3a"]
+curve = SubResource("Curve_hgn23")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_10mov"]
+lifetime_randomness = 0.28
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 25.77
+gravity = Vector3(0, -39.8, 0)
+linear_accel_min = 39.08
+linear_accel_max = 98.85
+scale_curve = SubResource("CurveTexture_6ik3a")
+anim_speed_max = 7.36
+anim_speed_curve = SubResource("CurveTexture_8vtik")
+turbulence_enabled = true
+turbulence_noise_strength = 5.04
+turbulence_noise_scale = 5.405
+turbulence_initial_displacement_min = -22.6
+turbulence_initial_displacement_max = 1.49012e-06
+
+[node name="Fish" type="RigidBody2D"]
+collision_layer = 2
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("2_6ik3a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 1)
+rotation = 1.52367
+scale = Vector2(0.3, 0.3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.556
+autostart = true
+
+[node name="EatArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="Area2D" type="CollisionShape2D" parent="EatArea"]
+shape = SubResource("CircleShape2D_hgn23")
+
+[node name="DetectArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectArea"]
+shape = SubResource("CircleShape2D_xu20i")
+
+[node name="Hunger" type="Timer" parent="."]
+wait_time = 23.449
+autostart = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_6ik3a")
+texture = ExtResource("2_hgn23")
+lifetime = 3.4
+randomness = 0.76
+process_material = SubResource("ParticleProcessMaterial_10mov")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="EatArea" to="." method="_on_eat_area_body_entered"]
+[connection signal="body_entered" from="DetectArea" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="DetectArea" to="." method="_on_detect_area_body_exited"]
+[connection signal="timeout" from="Hunger" to="." method="_on_hunger_timeout"]

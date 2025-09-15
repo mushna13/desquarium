@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdwxj14q7a58e"]
+
+[ext_resource type="Script" uid="uid://oqrno557c1x0" path="res://eating_mechanism.gd" id="1_a8vjb"]
+
+[node name="Eating Mechanism" type="Area2D"]
+script = ExtResource("1_a8vjb")

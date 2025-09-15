@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bt5nk8fwykqdw"]
+
+[ext_resource type="PackedScene" uid="uid://dt824t17dqewo" path="res://fish.tscn" id="1_3ut4u"]
+[ext_resource type="Texture2D" uid="uid://j2yebsjjpu15" path="res://fishes/emu fish.png" id="2_q01wm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q01wm"]
+radius = 105.001
+height = 515.37
+
+[node name="Wonderhoy Fish" instance=ExtResource("1_3ut4u")]
+collision_layer = 2
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(3, -2)
+shape = SubResource("CapsuleShape2D_q01wm")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_q01wm")

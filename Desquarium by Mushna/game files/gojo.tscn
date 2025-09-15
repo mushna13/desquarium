@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8k5l7lctqtlw"]
+
+[ext_resource type="PackedScene" uid="uid://dt824t17dqewo" path="res://fish.tscn" id="1_13yip"]
+[ext_resource type="Texture2D" uid="uid://b1ixps1sktkry" path="res://fishes/gojo.png" id="2_q063f"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q063f"]
+radius = 215.208
+height = 591.7
+
+[node name="Gojo" instance=ExtResource("1_13yip")]
+collision_layer = 2
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CapsuleShape2D_q063f")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_q063f")

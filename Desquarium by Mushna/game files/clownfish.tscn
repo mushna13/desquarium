@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0cipndbobvpo"]
+
+[ext_resource type="PackedScene" uid="uid://dt824t17dqewo" path="res://fish.tscn" id="1_6thd1"]
+[ext_resource type="Texture2D" uid="uid://c4xcb1ex056ul" path="res://fishes/clownfish.png" id="2_d4msy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u4g2q"]
+radius = 160.45
+height = 647.833
+
+[node name="clown_fish" instance=ExtResource("1_6thd1")]
+collision_layer = 2
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(1, 10)
+shape = SubResource("CapsuleShape2D_u4g2q")
+
+[node name="Sprite2D" parent="." index="1"]
+position = Vector2(0, -2)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("2_d4msy")

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://spkownxfppm7"]
+
+[ext_resource type="PackedScene" uid="uid://dt824t17dqewo" path="res://fish.tscn" id="1_l3g5t"]
+[ext_resource type="Texture2D" uid="uid://c3anjoa355sg5" path="res://fishes/african jewelfish.png" id="2_c6cms"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mr4el"]
+radius = 160.45
+height = 569.806
+
+[node name="african_jewelfish" instance=ExtResource("1_l3g5t")]
+collision_layer = 2
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(2, 15)
+shape = SubResource("CapsuleShape2D_mr4el")
+
+[node name="Sprite2D" parent="." index="1"]
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("2_c6cms")

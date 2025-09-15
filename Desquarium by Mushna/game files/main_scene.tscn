@@ -1,0 +1,82 @@
+[gd_scene load_steps=9 format=3 uid="uid://b0bh8jcnci1lm"]
+
+[ext_resource type="Script" uid="uid://yikk3y1bvtgp" path="res://algae.gd" id="1_8mm7a"]
+[ext_resource type="Script" uid="uid://cw3tbqv586fe2" path="res://main_scene.gd" id="1_hq1ik"]
+[ext_resource type="Texture2D" uid="uid://bs7n4gu2olmwv" path="res://vfx/algae1.png" id="2_hq1ik"]
+[ext_resource type="Theme" uid="uid://1s5r4edd2wxd" path="res://tt.tres" id="4_hq1ik"]
+[ext_resource type="Texture2D" uid="uid://qgjpw4e2vlbr" path="res://bgs/bg.jpg" id="9_7ycvg"]
+[ext_resource type="PackedScene" uid="uid://cfe38np0wwnl7" path="res://spawn_food.tscn" id="17_7th4q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0f027"]
+size = Vector2(24, 647)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2c62f"]
+size = Vector2(1149, 24)
+
+[node name="Main Scene" type="Node2D"]
+script = ExtResource("1_hq1ik")
+
+[node name="Algae" type="CanvasLayer" parent="."]
+script = ExtResource("1_8mm7a")
+
+[node name="Timer" type="Timer" parent="Algae"]
+wait_time = 9.911
+autostart = true
+
+[node name="TextureRect" type="TextureRect" parent="Algae"]
+modulate = Color(1, 1, 1, 0)
+offset_right = 1153.0
+offset_bottom = 650.0
+texture = ExtResource("2_hq1ik")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Algae"]
+offset_right = 244.0
+offset_bottom = 43.0
+
+[node name="CleanButton" type="Button" parent="Algae/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_hq1ik")
+text = "    Clean Algae    "
+
+[node name="CheckButton" type="CheckButton" parent="Algae/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("4_hq1ik")
+theme_override_font_sizes/font_size = 0
+text = "Food"
+alignment = 1
+
+[node name="Spawn Food" parent="Algae/HBoxContainer" instance=ExtResource("17_7th4q")]
+
+[node name="Vertical Barriers" type="StaticBody2D" parent="."]
+collision_mask = 0
+
+[node name="Barrier Left" type="CollisionShape2D" parent="Vertical Barriers"]
+position = Vector2(12, 324.5)
+shape = SubResource("RectangleShape2D_0f027")
+
+[node name="Barrier Right" type="CollisionShape2D" parent="Vertical Barriers"]
+position = Vector2(1135, 323)
+shape = SubResource("RectangleShape2D_0f027")
+
+[node name="Horizontal Barriers" type="StaticBody2D" parent="."]
+position = Vector2(0, -2)
+collision_mask = 0
+
+[node name="Barrier Top" type="CollisionShape2D" parent="Horizontal Barriers"]
+position = Vector2(571.5, 11.5)
+shape = SubResource("RectangleShape2D_2c62f")
+
+[node name="Barrier Bottom" type="CollisionShape2D" parent="Horizontal Barriers"]
+position = Vector2(575.5, 635)
+shape = SubResource("RectangleShape2D_2c62f")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 649.0
+texture = ExtResource("9_7ycvg")
+
+[node name="Bubble" type="Node2D" parent="."]
+
+[connection signal="timeout" from="Algae/Timer" to="Algae" method="_on_timer_timeout"]
+[connection signal="pressed" from="Algae/HBoxContainer/CleanButton" to="Algae" method="_on_clean_button_pressed"]

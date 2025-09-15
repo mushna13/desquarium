@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://p6eodmc4cn7b"]
+
+[ext_resource type="PackedScene" uid="uid://dt824t17dqewo" path="res://fish.tscn" id="1_51lfg"]
+[ext_resource type="Texture2D" uid="uid://dbjrl0bseb6sy" path="res://fishes/cichlid.png" id="2_irix3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_51lfg"]
+radius = 153.273
+height = 731.641
+
+[node name="Cichlid" instance=ExtResource("1_51lfg")]
+collision_layer = 2
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(1, -2)
+shape = SubResource("CapsuleShape2D_51lfg")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_irix3")

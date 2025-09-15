@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dggm4pe88imoy"]
+
+[ext_resource type="PackedScene" uid="uid://dt824t17dqewo" path="res://fish.tscn" id="1_t8bya"]
+[ext_resource type="Texture2D" uid="uid://c4ho2aof3uyf2" path="res://fishes/neontetra.png" id="2_khraj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pjq3y"]
+radius = 99.4731
+height = 438.439
+
+[node name="Neon Tetra" instance=ExtResource("1_t8bya")]
+collision_layer = 2
+minimum = -90
+maximum = 90
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(-2, -5)
+scale = Vector2(0.393525, 0.342388)
+shape = SubResource("CapsuleShape2D_pjq3y")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_khraj")

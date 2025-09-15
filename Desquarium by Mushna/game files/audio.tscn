@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dd2lvcatfvy1w"]
+
+[ext_resource type="AudioStream" uid="uid://oyedifkgyh5r" path="res://aquatic ambience.mp3" id="1_qc0l7"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_qc0l7")
+autoplay = true
