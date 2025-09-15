@@ -1,8 +1,8 @@
 Hello! Thank you so much for downloading my game. :3
 
 To play the game,
-1. Download Desquarium-win.zip if on Windows
-Download Desquarium-mac.zip if on MacOS
+1. Download: Desquarium-win.zip if on Windows
+             Desquarium-mac.zip if on MacOS
 2. Extract the file, and it's ready to play!
 
 PS. MacOS users might get a pop up saying that Apple could not verify the application -- when that happens,
